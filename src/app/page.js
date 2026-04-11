@@ -2,7 +2,7 @@ import Banner from "@/components/Banner";
 import States from "@/components/States";
 import TrandingApps from "@/components/TrandingApps";
 import { Suspense } from "react";
- const appPromise=fetch("data.json").then(res=>res.json())
+ const appPromise=fetch("http://localhost:3000/data.json").then(res=>res.json())
 export default function Home() {
   return (
     <>

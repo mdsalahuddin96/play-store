@@ -1,14 +1,15 @@
-import Image from 'next/image';
-import logo from '../assets/images/logo.png'
+import Image from "next/image";
+import logo from "../assets/images/logo.png";
 import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <a>Home</a>
+        <Link href={'/'}>Home</Link>
       </li>
       <li>
-        <a>Apps</a>
+        <Link href={'/allapps'}>Apps</Link>
       </li>
       <li>
         <a>Installation</a>
@@ -43,23 +44,18 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className='flex gap-1 items-center'>
-            <Image
-            src={logo}
-            alt='logo image'
-            width={40}
-            height={40}
-            />
-            <p className='font-bold text-'>Hero.io</p>
+        <div className="flex gap-1 items-center">
+          <Image src={logo} alt="logo image" width={40} height={40} />
+          <p className="font-bold text-">Hero.io</p>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn"><FaGithub/> Contributed</a>
+        <a className="btn">
+          <FaGithub /> Contributed
+        </a>
       </div>
     </div>
   );

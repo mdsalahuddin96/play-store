@@ -3,6 +3,8 @@ import downloadIcon from '../../../assets/images/icon-downloads.png'
 import ratingIcon from "../../../assets/images/icon-ratings.png"
 import reviewIcon from "../../../assets/images/icon-review.png"
 import VerticalComposedChart from "@/components/RatingChart";
+import { useContext } from "react";
+import { RatingContext } from "@/context/RatingContext";
 const AppDetails = async ({ params }) => {
   const { appId } = await params;
   const res = await fetch("http://localhost:3000/data.json");
@@ -20,17 +22,19 @@ const AppDetails = async ({ params }) => {
     downloads,
     ratings,
   } = selectedApp;
+
+
   return (
     <div className="container mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-4 border-b border-gray-300 p-10">
-        <div className="bg-base-100 p-5">
+        <div className="bg-base-100 p-6">
           <Image src={image} alt={title} width={200} height={200} />
         </div>
 
         <div>
           <h1 className="font-bold text-3xl">{title}</h1>
           <p>Developed by <span className="text-[#632EE3]">{companyName}</span></p>
-          <div className="grid md:grid-cols-3 gap-3 border-t border-gray-300 pt-10 mt-3">
+          <div className="grid md:grid-cols-3 gap-3 border-t border-gray-300 pt-6 mt-3">
             <div className="flex flex-col items-center justify-left">
                 <Image
                 src={downloadIcon}
@@ -67,9 +71,9 @@ const AppDetails = async ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="p-10">
+      <div className="px-10 py-5 ">
             <h3 className="text-2xl font-bold">Ratings</h3>
-            <VerticalComposedChart ratings={ratings}></VerticalComposedChart>
+            <VerticalComposedChart key={id} ratings={ratings}></VerticalComposedChart>
       </div>
     </div>
   );

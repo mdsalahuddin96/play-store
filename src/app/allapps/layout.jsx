@@ -1,3 +1,5 @@
+import RatingContextProvider from "@/context/RatingContext";
+
 const AppsLayout = ({ children }) => {
   return (
     <div className="bg-base-300 py-10">
@@ -7,7 +9,7 @@ const AppsLayout = ({ children }) => {
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
       </div>
-      <main>{children}</main>
+      <main><RatingContextProvider>{children}</RatingContextProvider></main>
     </div>
   );
 };

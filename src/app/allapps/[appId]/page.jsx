@@ -2,9 +2,7 @@ import Image from "next/image";
 import downloadIcon from '../../../assets/images/icon-downloads.png'
 import ratingIcon from "../../../assets/images/icon-ratings.png"
 import reviewIcon from "../../../assets/images/icon-review.png"
-import VerticalComposedChart from "@/components/RatingChart";
-import { useContext } from "react";
-import { RatingContext } from "@/context/RatingContext";
+import RatingChart from "@/components/RatingChart";
 const AppDetails = async ({ params }) => {
   const { appId } = await params;
   const res = await fetch("http://localhost:3000/data.json");
@@ -71,9 +69,13 @@ const AppDetails = async ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="px-10 py-5 ">
+      <div className="px-10 py-5 border-b border-gray-300">
             <h3 className="text-2xl font-bold">Ratings</h3>
-            <VerticalComposedChart key={id} ratings={ratings}></VerticalComposedChart>
+            <RatingChart ratings={ratings}></RatingChart>
+      </div>
+      <div className="px-10 py-5 ">
+            <h3 className="text-2xl font-bold mb-5">Description</h3>
+            <p>{description}</p>
       </div>
     </div>
   );

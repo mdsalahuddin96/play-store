@@ -10,7 +10,7 @@ import {
   YAxis,
 } from "recharts";
 
-const VerticalComposedChart = ({ ratings }) => {
+const RatingChart = ({ ratings }) => {
   const sortedRating = [...ratings].sort((a, b) => b.count - a.count);
 
   return (
@@ -43,4 +43,4 @@ const VerticalComposedChart = ({ ratings }) => {
   );
 };
 
-export default VerticalComposedChart;
+export default RatingChart;

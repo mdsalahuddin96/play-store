@@ -18,19 +18,7 @@ const linksData=[
     text:'Installation'
   }
 ]
-  // // const links = (
-  // //   <>
-  // //     <li>
-  // //       <Link href={'/'}>Home</Link>
-  // //     </li>
-  // //     <li>
-  // //       <Link href={'/allapps'}>Apps</Link>
-  // //     </li>
-  // //     <li>
-  // //       <Link href={'/installation'}>Installation</Link>
-  // //     </li>
-  // //   </>
-  // );
+  
   return (
     <div className="navbar container mx-auto ">
       <div className="navbar-start">
@@ -56,9 +44,7 @@ const linksData=[
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {linksData.map((data,ind)=><li key={ind}>
-            <Link href={data.href}>{data.text}</Link>
-          </li>)}
+            {linksData.map((data,ind)=><NavLinks key={ind} href={data.href} text={data.text}></NavLinks>)}
           </ul>
         </div>
         <div className="flex gap-1 items-center">

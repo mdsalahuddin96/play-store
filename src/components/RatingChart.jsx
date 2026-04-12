@@ -14,8 +14,8 @@ const RatingChart = ({ ratings }) => {
   const sortedRating = [...ratings].sort((a, b) => b.count - a.count);
 
   return (
-    <div style={{ width: "80%", height: 300 }}>
-      <ResponsiveContainer>
+    <div style={{ width: "80%", height: '300px' }}>
+      <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           layout="vertical"
           data={sortedRating}
@@ -30,7 +30,7 @@ const RatingChart = ({ ratings }) => {
           <YAxis
             dataKey="name"
             type="category"
-            width="auto"
+            width="80"
             axisLine={false}
             tickLine={false}
           />

@@ -2,6 +2,8 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import InstallAppContextProvider from "@/components/InstallAppContextProvider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +30,10 @@ export default function RootLayout({ children }) {
         <header className="bg-base-100 shadow-sm">
           <Navbar></Navbar>
         </header>
-        <main>{children}</main>
-        <Footer/>
+        <main>
+          <InstallAppContextProvider>{children}</InstallAppContextProvider>
+        </main>
+        <Footer />
       </body>
     </html>
   );

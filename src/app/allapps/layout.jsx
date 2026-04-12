@@ -1,4 +1,4 @@
-import RatingContextProvider from "@/context/RatingContext";
+
 
 const AppsLayout = ({ children }) => {
   return (
@@ -9,7 +9,8 @@ const AppsLayout = ({ children }) => {
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
       </div>
-      <main><RatingContextProvider>{children}</RatingContextProvider></main>
+      
+      <main>{children}</main>
     </div>
   );
 };

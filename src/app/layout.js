@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import InstallAppContextProvider from "@/context/InstallAppContextProvider";
 import { ToastContainer } from "react-toastify";
+import Providers from "@/lib/providers";
 
 
 const geistSans = Geist({
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
           <Navbar></Navbar>
         </header>
         <main>
-          <InstallAppContextProvider>{children}</InstallAppContextProvider>
+          <Providers>{children}</Providers>
         </main>
         <Footer />
         <ToastContainer />

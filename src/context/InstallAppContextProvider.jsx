@@ -1,7 +1,9 @@
 'use client'
-import React, { createContext, useState } from 'react';
-export const InstallAppContext=createContext()
 
+
+import React, {createContext, useState } from 'react';
+
+export const InstallAppContext=createContext();
 const InstallAppContextProvider = ({children}) => {
     const [installedApp, setInstalledApp]=useState([])
     const data={

@@ -7,13 +7,13 @@ import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-12 pb-8 px-4">
+    <footer className="bg-[#001931] text-gray-300 pt-12 pb-8 px-4">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Section 1: Brand/About */}
         <div className="space-y-4">
           <div className="flex gap-1 items-center">
             <Image src={logo} alt="logo image" width={40} height={40} />
-            <p className="font-bold text-">Hero.io</p>
+            <p className="font-bold text-white">Hero.io</p>
           </div>
         </div>
         
@@ -26,25 +26,25 @@ const Footer = () => {
             <a 
               href="https://github.com/mdsalahuddin96" 
               target="_blank" 
-              className="p-2 bg-gray-800 rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
+              className="p-2 bg-white text-black rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
             >
               <GiThunderBlade size={20} />
             </a>
             <a 
               href="#" 
-              className="p-2 bg-gray-800 rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
+              className="p-2 bg-white text-black rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
             >
               <LiaLinkedin size={20} />
             </a>
             <a 
               href="#" 
-              className="p-2 bg-gray-800 rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
+              className="p-2 bg-white text-black rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
             >
               <FaFacebook size={20} />
             </a>
             <a 
               href="#" 
-              className="p-2 bg-gray-800 rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
+              className="p-2 bg-white text-black rounded-full hover:bg-green-500 hover:text-white transition-all duration-300"
             >
               <BsTwitterX size={20} />
             </a>

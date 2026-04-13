@@ -1,7 +1,6 @@
 import Image from "next/image";
 import logo from "../assets/images/logo.png";
 import { FaGithub } from "react-icons/fa6";
-import Link from "next/link";
 import NavLinks from "./NavLinks";
 const Navbar = () => {
 const linksData=[
@@ -49,7 +48,7 @@ const linksData=[
         </div>
         <div className="flex gap-1 items-center">
           <Image src={logo} alt="logo image" width={40} height={40} />
-          <p className="font-bold text-">Hero.io</p>
+          <p className="font-bold bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text ">Hero.io</p>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -58,7 +57,7 @@ const linksData=[
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">
+        <a className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white border-none">
           <FaGithub /> Contributed
         </a>
       </div>

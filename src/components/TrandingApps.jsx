@@ -1,4 +1,4 @@
-"use client";
+
 import { use } from "react";
 import AppCard from "./AppCard";
 import Link from "next/link";

@@ -1,9 +1,18 @@
 import Image from "next/image";
 import { FaRegStar } from "react-icons/fa";
 import downloadImage from "@/assets/images/icon-downloads.png";
+import { useContext } from "react";
+import { InstallAppContext } from "@/context/InstallAppContextProvider";
+import { toast } from "react-toastify";
 
 const InstalledAppCard = ({ app }) => {
-  const { image, title, ratingAvg, downloads,size } = app;
+  const { id, image, title, ratingAvg, downloads,size } = app;
+  const {installedApp,setInstalledApp}=useContext(InstallAppContext)
+  const handleUninstall=()=>{
+    const filteredApp=[...installedApp].filter(app=>app.id!=id);
+    setInstalledApp(filteredApp)
+    toast.warning(`${title} Uninstalled!`)
+  }
   return (
     <div className="bg-base-100 flex justify-between items-center p-2 rounded-xl">
       <div className="flex gap-3 items-center">
@@ -33,7 +42,7 @@ const InstalledAppCard = ({ app }) => {
         </div>
       </div>
       <div>
-        <button className="btn btn-success">Uninstall</button>
+        <button onClick={handleUninstall} className="btn btn-success">Uninstall</button>
       </div>
     </div>
   );

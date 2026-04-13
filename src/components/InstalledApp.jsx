@@ -1,13 +1,10 @@
-"use client";
+"use client"
 import { InstallAppContext } from "@/context/InstallAppContextProvider";
-import Image from "next/image";
 import React, { useContext } from "react";
-import { FaRegStar } from "react-icons/fa";
-import downloadImage from "@/assets/images/icon-downloads.png";
 import InstalledAppCard from "./InstalledAppCard";
 
 const InstalledApp = () => {
-  const { installedApp, setInstalledApp } = useContext(InstallAppContext);
+  const { installedApp } = useContext(InstallAppContext);
   if (installedApp.length === 0) {
     return (
       <div className="flex items-center justify-center h-1/3">

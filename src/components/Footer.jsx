@@ -8,7 +8,7 @@ import { BsTwitterX } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer className="bg-[#001931] text-gray-300 pt-12 pb-8 px-4">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between">
         {/* Section 1: Brand/About */}
         <div className="space-y-4">
           <div className="flex gap-1 items-center">
